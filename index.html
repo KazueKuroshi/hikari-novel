@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hikari Bunko</title>
+  <title>Hikari Bunko - Katalog Artefak</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="landing-overlay">
-    <h2 class="fade-in">“Dimensi Cahaya terbuka hanya bagi jiwa terpilih...”</h2>
-  </div>
 
   <header>
     <h1>光文庫へようこそ</h1>
@@ -17,30 +14,47 @@
       <ul>
         <li><a href="index.html">Beranda</a></li>
         <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="promo.html">Promo Terlarang</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="intro">
-      <p>“Di sinilah cahaya kisah para pahlawan berpendar dari dimensi lain…”</p>
-    </section>
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Cari naskah suci..." />
+  </div>
 
+  <div id="filter-bar">
+    <button onclick="filterGenre('all')">Semua</button>
+    <button onclick="filterGenre('Fantasy')">Fantasy</button>
+    <button onclick="filterGenre('Romance')">Romance</button>
+    <button onclick="filterGenre('Chuunibyou')">Chuunibyou</button>
+  </div>
+
+  <main>
     <section class="novel-list">
-      <div class="novel-card">
-        <img src="assets/images/novel1.jpg" alt="Judul 1" />
+
+      <div class="novel-card" data-genre="Fantasy School">
+        <img src="assets/images/novel1.jpg" alt="Mahou Gakuen no Tenshi" />
         <h3>Mahou Gakuen no Tenshi</h3>
-        <p>Genre: Fantasy, School, Romance</p>
-        <div class="stars">★★★★☆ (4.0)</div>
-        <a href="detail.html" class="read-button">Lihat Detail</a>
+        <div class="genre-badges">
+          <span class="badge">Fantasy</span>
+          <span class="badge">School</span>
+        </div>
+        <p class="price">Rp25.000</p>
+        <a href="detail.html" class="buy-button">Lihat Detail</a>
       </div>
-      <div class="novel-card">
-        <img src="assets/images/novel2.jpg" alt="Judul 2" />
+
+      <div class="novel-card" data-genre="Mystery Chuunibyou">
+        <img src="assets/images/novel2.jpg" alt="Kurokami Requiem" />
         <h3>Kurokami Requiem</h3>
-        <p>Genre: Action, Mystery, Chuunibyou</p>
-        <div class="stars">★★★☆☆ (3.5)</div>
-        <a href="#" class="read-button">Segera Hadir</a>
+        <div class="genre-badges">
+          <span class="badge">Mystery</span>
+          <span class="badge">Chuunibyou</span>
+        </div>
+        <p class="price">Rp28.000</p>
+        <a href="checkout.html" class="buy-button">Tebus Sekarang</a>
       </div>
+
     </section>
   </main>
 
